@@ -128,7 +128,7 @@ func (q *Queries) GetAccountList(ctx context.Context, arg GetAccountListParams) 
 		return nil, err
 	}
 	defer rows.Close()
-	var items []Account
+	items := []Account{}
 	for rows.Next() {
 		var i Account
 		if err := rows.Scan(

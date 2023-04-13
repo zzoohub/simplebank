@@ -23,7 +23,7 @@ func RandomString(n int) string {
 	var sb strings.Builder
 	lens := len(alphabet)
 
-	for i := 0; i < lens; i++ {
+	for i := 0; i < n; i++ {
 		c := alphabet[rand.Intn(lens)]
 		sb.WriteByte(c)
 	}

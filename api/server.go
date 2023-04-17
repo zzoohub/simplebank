@@ -34,7 +34,7 @@ func NewServer(config util.Config, store db.Store) (*Server, error) {
 	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
 		v.RegisterValidation("currency", validCurrancy)
 	}
-	
+
 	server.setUpRouter()
 	
 	return server, nil
@@ -45,11 +45,14 @@ func (server *Server) setUpRouter() {
 
 	router.POST("/users", server.createUser)
 	router.POST("/login", server.loginUser)
-	router.POST("/accounts", server.createAccount)
-	router.GET("/accounts/:id", server.getAccount)
-	router.DELETE("/accounts/:id", server.deleteAccount)
-	router.GET("/accounts", server.getAccountList)
-	router.POST("/transfers", server.createTransfer)
+
+	authRoutes := router.Group("/").Use(authMiddleware(server.tokenMaker))
+
+	authRoutes.POST("/accounts", server.createAccount)
+	authRoutes.GET("/accounts/:id", server.getAccount)
+	authRoutes.DELETE("/accounts/:id", server.deleteAccount)
+	authRoutes.GET("/accounts", server.getAccountList)
+	authRoutes.POST("/transfers", server.createTransfer)
 
 	server.router = router
 }

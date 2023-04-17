@@ -3,7 +3,6 @@ package util
 import (
 	"time"
 
-	_ "github.com/golang/mock/mockgen/model"
 	"github.com/spf13/viper"
 )
 

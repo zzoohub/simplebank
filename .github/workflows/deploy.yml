@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main"]
 
-deploy:
+jobs:
   build:
     name: Build images
     runs-on: ubuntu-latest
@@ -20,7 +20,7 @@ deploy:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::207128477901:role/github-action-role
+          role-to-assume: arn:aws:ecr:ap-northeast-2:207128477901:repository/simplebank
           aws-region: ap-northeast-2
 
       - name: Login to Amazon ECR

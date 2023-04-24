@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/zzoopro/simple_bank/util"
+	"github.com/zzoopro/simplebank/util"
 )
 
 func createRandomUser(t *testing.T) User {

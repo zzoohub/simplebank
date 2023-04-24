@@ -1,4 +1,4 @@
-module github.com/zzoopro/simple_bank
+module github.com/zzoopro/simplebank
 
 go 1.19
 

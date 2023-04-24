@@ -8,8 +8,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/lib/pq"
-	db "github.com/zzoopro/simple_bank/db/sqlc"
-	"github.com/zzoopro/simple_bank/token"
+	db "github.com/zzoopro/simplebank/db/sqlc"
+	"github.com/zzoopro/simplebank/token"
 )
 
 type createAccountRequest struct {	

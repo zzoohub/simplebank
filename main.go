@@ -4,9 +4,9 @@ import (
 	"database/sql"
 	"log"
 
-	"github.com/zzoopro/simple_bank/api"
-	db "github.com/zzoopro/simple_bank/db/sqlc"
-	"github.com/zzoopro/simple_bank/util"
+	"github.com/zzoopro/simplebank/api"
+	db "github.com/zzoopro/simplebank/db/sqlc"
+	"github.com/zzoopro/simplebank/util"
 
 	_ "github.com/lib/pq"
 )

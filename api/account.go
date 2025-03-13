@@ -111,6 +111,7 @@ func (server *Server) getAccountList(ctx *gin.Context) {
 type deleteAccountRequest struct{
 	ID int64 `uri:"id" binding:"required,min=1"`
 }
+
 func (server *Server) deleteAccount(ctx *gin.Context) {
 	var req deleteAccountRequest
 

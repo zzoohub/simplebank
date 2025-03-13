@@ -33,6 +33,7 @@ func createRandomUser(t *testing.T) User {
 	return user
 }
 
+
 func TestCreateUser(t *testing.T) {
 	createRandomUser(t)
 }

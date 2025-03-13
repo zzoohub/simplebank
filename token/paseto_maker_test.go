@@ -45,3 +45,4 @@ func TestExpiredPasetoToken(t *testing.T) {
 	require.EqualError(t, err, ErrExpiredToken.Error())
 	require.Nil(t, payload)
 }
+

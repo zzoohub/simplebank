@@ -65,6 +65,7 @@ func (server *Server) Start(address string) error {
 func errorResponse(err error) gin.H {
 	return gin.H{"error": err.Error()}
 }
+
 func okResponse(message string) gin.H {
 	return gin.H{"ok": message}
 }

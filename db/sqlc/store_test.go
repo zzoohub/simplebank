@@ -8,6 +8,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+
 func TestTransferTx(t *testing.T) {
 	store := NewStore(testDB)
 
